@@ -9,49 +9,27 @@ const container = document.getElementById('container');
 
 
 function fillGrid(size) {
-    for (let i = 0; i < size*size; i++) {
+    for (let i = 0; i < size*size - 4; i++) {
       const gridElement = document.createElement("div");
       gridElement.classList = "grid-element";
       //Add hover event Listener
-      addEventListener("mouseover", change_color)
+      gridElement.addEventListener("mouseover", change_color)
         
       container.appendChild(gridElement);
       //Appends element to container
     }
+    //Change grid_element's colour to black to mimic writing or drawing or sketching tomato tomato11
+
     function change_color(e){
-        const randomR = Math.floor(Math.random() *256);
-        const randomG = Math.floor(Math.random() *256);
-        const randomB = Math.floor(Math.random() *256);
-        e.target.style.backgroundColor = `rgb(${randomR}, ${randomG}, ${randomB})`;
-    }; 
+        e.target.style.backgroundColor = `rgb(${0}, ${0}, ${0})`;
+    }
     
   }
-  /*function grid_create(){
-      const size = prompt("Enter New Size from 16-64");
-      if (size !== null){
-          size = parseInt(size);
-          if (size < 16 || size > 64){
-              alert("Please enter a number between 16 to 64");
-          }
-          else{
-              clear_grid();
-              fillGrid(size);
 
-          }
-      }
-  }
-
-function clear_grid(){
-    const grid_array = Array.from(container.childNodes);
-    grid_array.forEach((element) => {
-        container.removeChild(element);
-    });
-*/
+function clearGrid(){
+    container.innerHTML = '';
+    fillGrid(48)
+}
 
     
-
-
-
-
-  fillGrid(16);
-  
+fillGrid(48);
