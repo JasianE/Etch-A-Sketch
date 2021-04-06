@@ -1,3 +1,5 @@
+"use strict"
+
 //get reference for container
 const container = document.getElementById('container');
 //const button = document.getElementById('button');
