@@ -5,6 +5,8 @@ A browser-based Etch-a-Sketch drawing app built in **2021** as part of **The Odi
 
 ## Overview
 
+Live Link: https://rawcdn.githack.com/JasianE/Etch-A-Sketch/593f3ff18b8976a572884006d3b752516f679d5e/index.html
+
 This project was an early exercise in DOM manipulation and event handling. The goal was to recreate a simple drawing experience where users can “sketch” by hovering over a grid.
 
 It helped build foundational skills in JavaScript and front-end development, especially around dynamically creating and updating UI elements.
